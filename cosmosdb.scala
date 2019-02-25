@@ -19,7 +19,10 @@ val readConfig = Map(
 val config = Config(readConfig)
 
 // Connect via azure-cosmosdb-spark to create Spark DataFrame
+// 
 val df = spark.sqlContext.read.cosmosDB(config)
+// The following code works as well for creating the DataFrame
+//val df = spark.read.cosmosDB(config)
 
 // COMMAND ----------
 
